@@ -1,0 +1,36 @@
+Database Design:
+
+User							
+- userId (P.K.)				
+- userName					
+							
+Vehicle							
+- vehicleId (P.K)
+- vehicleType 
+
+RentAgreement
+- agreementId (P.K.)
+- vehicleId (F.K)
+- userId (F.K)
+- startDate
+- endDate
+~IndexVehicleId
+~IndexUserId
+
+RentDetails 		
+- rentalId (P.K)		
+- actualStartDate        
+- actualEndDate
+- BillId (F.K.)
+- agreementId (F.K)
+~IndexActualStartDate
+~IndexActualEndDate
+
+Bill
+- billId (P.K.)
+- branchId (F.K)
+- Amount
+
+Branch
+- branchId (P.K)
+- address

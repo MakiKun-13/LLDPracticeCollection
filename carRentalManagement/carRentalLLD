@@ -1,0 +1,52 @@
+Problem Statement:
+A Car Rental System is a software built to handle the renting of automobiles for a short period of time,
+generally ranging from a few hours to a few weeks. A car rental system often has numerous local branches
+(to allow its user to return a vehicle to a different location), and primarily located near airports or busy city areas.
+
+System Requirements:
+- The rental service provides the option to choose different vehicles to rent
+- User can rent a vehicle
+- User can return the vehicle/ cancel the rental
+- It has multiple branches
+- User has to pay the amount based on the type of vehicle and duration
+
+Entities:
+User
+Vehicle
+Branch
+RentAgreement
+RentDetails
+Bill
+
+API s: -
+GET: /vehicles
+- Gets all the vehicles in the system
+
+GET /vehicles			         
+- RequestBody: vehicleType, startDate, endDate
+- Gets the vehicles based on the vehicleType, rental startDate and endDate selected by the user
+
+POST: /rent			              
+- RequestBody: startDate, endDate, vehicleId, userId,     branch
+- Rents the given vehicle
+
+POST: /rent/{rentalId}/cancel         
+- RequestBody: branch
+- Cancel a rental
+
+GET: /rent?userId={}
+- Gets all the rentals of a user
+
+GET: /bill?rentalId={}
+- gets the bill for a rental
+
+
+
+
+
+
+
+
+
+
+
