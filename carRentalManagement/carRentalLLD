@@ -22,15 +22,15 @@ API s: -
 GET: /vehicles
 - Gets all the vehicles in the system
 
-GET /vehicles			         
+GET /vehicles
 - RequestBody: vehicleType, startDate, endDate
 - Gets the vehicles based on the vehicleType, rental startDate and endDate selected by the user
 
-POST: /rent			              
+POST: /rent
 - RequestBody: startDate, endDate, vehicleId, userId,     branch
 - Rents the given vehicle
 
-POST: /rent/{rentalId}/cancel         
+POST: /rent/{rentalId}/cancel
 - RequestBody: branch
 - Cancel a rental
 
@@ -38,7 +38,7 @@ GET: /rent?userId={}
 - Gets all the rentals of a user
 
 GET: /bill?rentalId={}
-- gets the bill for a rental
+- Gets the bill for a rental
 
 
 
