@@ -1,0 +1,70 @@
+Problem Statement:
+A Library Management System is a software built to handle the primary housekeeping functions of a library.
+Libraries rely on library management systems to manage asset collections as well as relationships with their members.
+Library management systems help libraries keep track of the books and their checkouts, as well as members’ subscriptions and profiles.
+Library management systems also involve maintaining the database for entering new books and recording books that have been borrowed with their respective due dates.
+
+System Requirements: Based on use case
+Library user should be able to do the following:
+- Get a subscription / renew a subscription
+- Get subscription details
+- Search for book (based on filters)
+- Borrow a book
+- Return a book
+- Check all the books they have borrowed
+
+Librarian should be able to do the following:
+- Search for a book (based on filters)
+- Search for an user
+- Issue a library card (For new user)
+- Add new books
+- Remove books that are no longer available
+- Check all books borrowed by an user
+
+Entities:
+- User
+- Book
+- Subscription (Have details of subscription)
+- Registry (Have details of a borrowal)
+
+APIs:
+GET: /books?bookName={}
+- Search for a book based on name of the book
+
+GET: /books?author={}
+- Search for all books of an author
+
+POST: /user
+- RequestBody: userName,DOB
+- Issue a library card/create a new user
+
+POST: /usersubscription
+- RequestBody: subscriptionName, userId
+- Get a subscription/ renew a subscription
+
+POST: /borrow
+- RequestBody: userId, bookId
+- Borrow a book: creates a new record in BorrowRegistry
+
+GET: /borrow/{borrowId}
+- fetches the details of a borrowal
+
+POST: book/return    (RPC call)
+- RequestBody: borrowId
+- Returns a book
+
+GET: /user/{userId}
+- Gets details of all the borrowals of an user
+
+POST: /book
+- RequestBody: bookName, genre, author
+- Adds a new book in the system
+
+DELETE: /book/{bookId}
+- Removes a book from the system
+
+
+
+
+
+

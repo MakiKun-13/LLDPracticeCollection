@@ -1,0 +1,38 @@
+User:
+- userId (P.K)
+- userName
+
+Book:
+- bookId (P.K)
+- bookName
+- genre
+- author
+
+BorrowRegister:
+- borrowalId (P.K)
+- bookId (F.K.)
+- userId (F.K)
+- dateOfBorrowing
+- dueDateOfReturning
+- actualDateOfReturning
+- status
+
+Fine:
+- fineId (P.K)
+- borrowalId (F.K)
+- amount
+- status
+
+Subscription:
+- subscriptionId (P.K)
+- subscriptionName
+- duration
+- price
+
+SubscriptionsRegistry:
+- subscriptionRegistrationId (P.K)
+- subscriptionId (F.K)
+- userId (F.K)
+- subscriptionStatus
+- startTime
+- endTime
