@@ -9,19 +9,22 @@ Book:
 - author
 
 BorrowRegister:
-- borrowalId (P.K)
+- borrowId (P.K)
 - bookId (F.K.)
 - userId (F.K)
 - dateOfBorrowing
 - dueDateOfReturning
 - actualDateOfReturning
 - status
+~IndexUserId
+~IndexBookId
 
 Fine:
 - fineId (P.K)
-- borrowalId (F.K)
+- borrowId (F.K)
 - amount
 - status
+~IndexBorrowId
 
 Subscription:
 - subscriptionId (P.K)
@@ -36,3 +39,4 @@ SubscriptionsRegistry:
 - subscriptionStatus
 - startTime
 - endTime
+~IndexUserId
